@@ -1,0 +1,66 @@
+<div>
+  <mat-toolbar color="basic">
+    <mat-toolbar-row>
+      <div>
+        <a mat-button [routerLink]="''" style="font-size: 18px"> HOME </a>
+      </div>
+      <h1 style="margin: 0 auto">Add New Course</h1>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<form [formGroup]="courseForm" class="example-form" (ngSubmit)="onSubmit()">
+  <div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Course Name</mat-label>
+      <input matInput placeholder="Course Name" formControlName="name" />
+
+      <mat-error *ngIf="name?.hasError('required')">Required</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Poster</mat-label>
+      <input matInput placeholder="Url" formControlName="poster_url" />
+      <mat-error *ngIf="poster_url?.hasError('required')"
+        >Url Required</mat-error
+      >
+      <mat-error *ngIf="poster_url?.hasError('pattern')">Invalid Url</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Summary</mat-label>
+      <input matInput placeholder="Summary" formControlName="summary" />
+      <mat-error *ngIf="summary?.hasError('required')">Required</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Details</mat-label>
+      <input matInput placeholder="details" formControlName="details" />
+      <mat-error *ngIf="details?.hasError('required')">Required</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Duration</mat-label>
+      <input
+        type="number"
+        matInput
+        placeholder="Duration in hours"
+        formControlName="duration"
+      />
+      <mat-error *ngIf="duration?.hasError('required')">Required</mat-error>
+    </mat-form-field>
+  </div>
+
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    [disabled]="!courseForm.valid"
+  >
+    Submit
+  </button>
+</form>

@@ -1,0 +1,45 @@
+<div>
+  <mat-toolbar color="basic">
+    <mat-toolbar-row>
+      <div>
+        <a mat-button [routerLink]="''" style="font-size: 18px"> HOME </a>
+        <a mat-button [routerLink]="'myLearning'" style="font-size: 18px">
+          My Learning
+        </a>
+        <a mat-button [routerLink]="'addCourse'" style="font-size: 18px">
+          Add Course
+        </a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+<div class="search-field">
+  <form [formGroup]="searchForm">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Eg:Java" formControlName="searchField" />
+      <mat-icon matPrefix class="my-icon">search</mat-icon>
+    </mat-form-field>
+
+    <br />
+  </form>
+</div>
+<div>
+  <div class="reciepe-list-container" *ngIf="!show">
+    <app-coursecard
+      (delete)="deleteCourse($event)"
+      *ngFor="let course of allCourses$ | async"
+      [course]="course"
+    ></app-coursecard>
+  </div>
+  <div class="reciepe-list-container" *ngIf="show">
+    <app-coursecard
+      (delete)="deleteCourse($event)"
+      *ngFor="let course of searchedCourses"
+      [course]="course"
+    ></app-coursecard>
+  </div>
+
+  <div *ngIf="length">
+    <h1>No Courses Found</h1>
+  </div>
+</div>

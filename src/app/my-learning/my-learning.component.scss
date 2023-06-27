@@ -1,0 +1,30 @@
+.allRec{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-around;
+    background: rgb(250, 250, 250); 
+  }
+  
+  .course-container {
+      background: rgb(250, 250, 250); 
+     width: 400px;
+     border-radius: 16px;
+     overflow: hidden;
+     padding: 16px;
+   }
+   
+   
+  
+  .course-poster {
+   height: 450px;
+   object-fit: cover;
+   width: 100%;
+  
+    border-radius: 17px; 
+  }
+  .course-spec {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+  }

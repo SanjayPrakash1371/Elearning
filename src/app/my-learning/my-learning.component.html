@@ -1,0 +1,38 @@
+<div>
+  <mat-toolbar color="basic">
+    <mat-toolbar-row>
+      <div>
+        <a mat-button [routerLink]="''" style="font-size: 18px"> HOME </a>
+      </div>
+      <h1 style="margin: 0 auto">Favorites</h1>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+<div *ngIf="allLength == 0" style="text-align: center">
+  <span style="color: rgb(15, 26, 185); font-weight: bold; font-size: larger"
+    >Favorites Empty..!</span
+  >
+</div>
+
+<div class="allRec">
+  <div *ngFor="let course of all">
+    <div class="course-container">
+      <img
+        class="course-poster"
+        [src]="course.poster_url"
+        [alt]="course.name"
+      />
+      <div class="course-spec">
+        <h2>{{ course.name | uppercase }}</h2>
+        <h3>Duration : {{ course.duration }} Hrs</h3>
+      </div>
+      <p>{{ course.details }}</p>
+      <div class="course-spec">
+        <button mat-raised-button type="button" (click)="details(course.id)">
+          Details
+        </button>
+        <!-- <button mat-raised-button color="primary" type="button">Delete</button> -->
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="recipe-container">
+  <div>
+    <img class="recipe-poster" [src]="course.poster_url" [alt]="course.name" />
+    <div class="recipe-spec">
+      <h2
+        style="
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+            'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        "
+      >
+        {{ course.name | uppercase }}
+      </h2>
+    </div>
+    <h3
+      style="
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      "
+    >
+      Duration Time : 😎{{ course.duration }} hrs
+    </h3>
+    <div>
+      <button mat-icon-button color="primary" (click)="toggle()">
+        <mat-icon *ngIf="show">expand_less</mat-icon>
+
+        <mat-icon *ngIf="!show">expand_more</mat-icon>
+      </button>
+      <p *ngIf="show" class="movie-summary">{{ course.details }}</p>
+    </div>
+    <div class="recipe-spec">
+      <button mat-raised-button type="button" (click)="details(course.id)">
+        Course Info
+      </button>
+      <button
+        mat-raised-button
+        type="button"
+        [disabled]="myLearn"
+        (click)="addToMyLearning(course)"
+      >
+        <mat-icon>favorite</mat-icon>Start Course
+      </button>
+
+      <button mat-raised-button type="button" (click)="deleteCourse(course.id)">
+        <mat-icon>delete</mat-icon>Delete
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+[{
+    "id":"1",
+    "name":"Java",
+    "duration":5,
+    "summary":"Java is a most popular, object-oriented, widely used programming language and platform that is utilized for Android development, web development, artificial intelligence, cloud applications, and much more. So, mastering this gives you great opportunities in bigger organizations.",
+    "details":"Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.",
+    "poster_url":"https://wallpapercave.com/wp/wp7250277.jpg"
+},
+{
+    "id":"2",
+    "name":"Python",
+    "duration":10,
+    "summary":"This Python Tutorial is very well suited for Beginners, and also for experienced programmers with other programming languages like C++ and Java. This specially designed Python tutorial will help you learn Python Programming Language in the most efficient way, with topics from basics to advanced (like Web-scraping, Django, Deep-Learning, etc.) with examples.",
+    "details":"Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation via the off-side rule",
+    "poster_url":"https://www.technotification.com/wp-content/uploads/2017/05/Python-programming-compressed-840x500.jpg"
+
+},
+{
+    "id":"3",
+    "name":"C",
+    "duration":12,
+    "summary":"C is a powerful general-purpose programming language. It can be used to develop software like operating systems databases, compilers, and so on. C programming is an excellent language to learn to program for beginners. Our C tutorials will guide you to learn C programming one step at a time",
+    "details":"C is a general-purpose computer programming language. It was created in the 1970s by Dennis Ritchie, and remains very widely used and influential.",
+    "poster_url":"https://static.skillshare.com/uploads/video/thumbnails/b9455fc40a4053509ef0a77b8ddb6a51/original"
+
+}]

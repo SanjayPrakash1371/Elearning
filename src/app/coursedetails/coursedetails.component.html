@@ -1,0 +1,41 @@
+<!-- <p>reciepe-details works!{{ course }}</p> -->
+<div></div>
+<div>
+  <mat-toolbar color="basic">
+    <mat-toolbar-row>
+      <div>
+        <a mat-button [routerLink]="''" style="font-size: 18px"> HOME </a>
+      </div>
+      <h1 style="margin: 0 auto">{{ course?.name | uppercase }}</h1>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<div>
+  <div style="text-align: center">
+    <img class="course-poster" [src]="course?.poster_url" />
+  </div>
+  <div class="buttons-spec">
+    <button mat-raised-button color="primary" type="button">
+      <mat-icon>favorite</mat-icon>Favorite
+    </button>
+    <!-- <button mat-raised-button type="button" (click)="edit(course.id)">
+      Edit
+    </button> -->
+  </div>
+
+  <div class="course-spec">
+    <p>
+      <span style="color: rgb(15, 26, 185); font-weight: bold"
+        >Instructions : </span
+      >{{ course?.summary }}
+    </p>
+  </div>
+  <div class="course-preptime">
+    <p>
+      <span style="color: rgb(15, 26, 185); font-weight: bold"
+        >Duration Time : {{ course?.duration }} Hrs</span
+      >
+    </p>
+  </div>
+</div>
